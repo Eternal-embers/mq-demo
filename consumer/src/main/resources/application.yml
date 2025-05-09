@@ -1,0 +1,13 @@
+spring:
+  rabbitmq:
+    host: rabbitmq-server
+    port: 5672
+    virtual-host: /
+    username: admin
+    password: admin
+    listener:
+      simple:
+        prefetch: 1 # 最多只能预先获取一条消息，处理完才能获取下一条消息
+
+server:
+  port: 8082
